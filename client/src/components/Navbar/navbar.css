@@ -1,0 +1,407 @@
+.navbar {
+  width: calc(100% - 150px);
+  background: rgba(15, 15, 15, 0.596);
+  height: 9vh;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 30px 0px 30px 0px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.main-link {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  left: -50px;
+}
+
+.main-link a {
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.main-link a:hover {
+  color: #ff6b00;
+}
+
+.basketlogo {
+  width: 6vw;
+  height: 12vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.sankalplogo {
+  width: 9.9vw;
+  height: 9vh;
+  background-color: transparent;
+  margin-left: 35px;
+}
+
+.icons-nav {
+  color: white;
+  background-color: transparent;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  position: relative;
+  right: 100px;
+}
+
+.icon-nav {
+  font-size: 2.8rem;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.insta {
+  background: linear-gradient(45deg, #c13584, #e1306c, #f56040, #fcaf45);
+}
+
+.youtube {
+  color: #ff0000;
+}
+
+.facebook {
+  color: #1877f2;
+}
+
+/* Hamburger menu styles - only for 300px-499px */
+@media (min-width: 300px) and (max-width: 499px) {
+  .hamburger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+  
+  .hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger-line.rotate-45 {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger-line.opacity-0 {
+    opacity: 0;
+  }
+  
+  .hamburger-line.-rotate-45 {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .main-link {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: left 0.3s ease;
+    z-index: 15;
+    padding: 20px;
+    margin: 0;
+    backdrop-filter: blur(10px);
+  }
+  
+  .main-link.active {
+    left: 0;
+  }
+  
+  .main-link a {
+    font-size: 1.2rem !important;
+    padding: 10px 20px !important;
+  }
+  
+  .icons-nav {
+    display: none;
+  }
+  
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 12;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navbar {
+    padding: 0px 0px;
+    width: calc(100% - 5px);
+  }
+  
+  .sankalplogo {
+    width: 70px !important;
+    height: 60px !important;
+    margin-left: 5px !important;
+  }
+  
+  .basketlogo {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+/* Other media queries */
+@media (min-width: 1500px) and (max-width: 1699px) {
+  .navbar {
+    padding: 10px 10px;
+  }
+
+  .sankalplogo {
+    width: 170px;
+    height: 70px;
+  }
+
+  .basketlogo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .main-link {
+    gap: 45px;
+    position: relative;
+    left: -3%;
+  }
+
+  .main-link a {
+    font-size: 1.4rem;
+  }
+
+  .icon-nav {
+    font-size: 2.8rem;
+    position: relative;
+    left: 10%;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1499px) {
+  .navbar {
+    padding: 10px 10px;
+  }
+
+  .sankalplogo {
+    width: 170px;
+    height: 70px;
+  }
+
+  .basketlogo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .main-link {
+    gap: 35px;
+    position: relative;
+    left: 0%;
+  }
+
+  .main-link a {
+    font-size: 1.4rem;
+  }
+
+  .icon-nav {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1299px) {
+  .navbar {
+    padding: 10px 10px;
+  }
+
+  .sankalplogo {
+    width: 170px;
+    height: 70px;
+  }
+
+  .basketlogo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .main-link {
+    gap: 5px;
+    position: relative;
+    left: 0%;
+  }
+
+  .main-link a {
+    font-size: 1.4rem;
+  }
+  .icons-nav {
+    gap: 50px;
+    position: relative;
+    right: 50px;
+  }
+  .icon-nav {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1099px) {
+  .navbar {
+    padding: 10px 10px;
+  }
+
+  .sankalplogo {
+    width: 140px;
+    height: 70px;
+  }
+
+  .basketlogo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .main-link {
+    gap: 5px;
+    position: relative;
+    left: 0%;
+  }
+
+  .main-link a {
+    font-size: 1rem;
+  }
+  .icons-nav {
+    gap: 20px;
+    position: relative;
+    right: 50px;
+  }
+  .icon-nav {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+  .navbar {
+    padding: 0px 0px;
+    width: calc(100% - 50px);
+  }
+
+  .sankalplogo {
+    width: 100px;
+    height: 70px;
+  }
+
+  .basketlogo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .main-link {
+    gap: 0px;
+    position: relative;
+    left: -1%;
+  }
+
+  .main-link a {
+    font-size: 0.9rem;
+  }
+  .icons-nav {
+    gap: 20px;
+    position: relative;
+    right: 35px;
+  }
+  .icon-nav {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 699px) {
+  .navbar {
+    padding: 0px 0px;
+    width: calc(100% - 10px);
+  }
+
+  .sankalplogo {
+    width: 80px;
+    height: 70px;
+     margin-left: 5px;
+  }
+
+  .basketlogo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .main-link {
+    gap: 0px;
+    position: relative;
+    left: -1%;
+  }
+
+  .main-link a {
+    font-size: 0.6rem;
+    padding: 5px 8px;
+  }
+  .icons-nav {
+    gap: 20px;
+    position: relative;
+    right: 50px;
+  }
+  .icon-nav {
+    font-size: 1.5rem;
+  }
+}

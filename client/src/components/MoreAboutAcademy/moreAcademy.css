@@ -1,0 +1,625 @@
+.more-about {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  width: calc(100% - 140px);
+  height: 105vh;
+  margin: 30px auto;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: 80vh;
+  filter: brightness(65%) blur(2px);
+  object-fit: cover;
+}
+
+.moreabout-question {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  gap: 10px;
+}
+
+.moreabout-imgtext {
+  position: absolute;
+}
+
+.moreabout-imgtext p {
+  color: white;
+  align-items: center;
+  position: relative;
+  top: 310px;
+  left: 30px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.joinUsImage {
+  position: absolute;
+  height: 50vh;
+  width: 40vw;
+  border-radius: 30px;
+  margin: 30px 50px;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.basketball-iconmore {
+  color: white;
+  margin: 20px;
+  margin-right: 0;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 710px;
+}
+
+.moreabout-question h4 {
+  position: relative;
+  color: white;
+  left: 770px;
+  width: 100%;
+  text-align: left;
+}
+
+.moreabout-data {
+  position: absolute;
+  left: 55%;
+  top: 7%;
+  color: white;
+}
+
+.moreabout-data p {
+  line-height: 1.6rem;
+  font-size: 1rem;
+}
+.moreabout-data h1 {
+  font-size: 2.3rem;
+}
+.playernum-data {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 100%;
+  /* width: 25vw; */
+  border: 5px solid #e77241;
+  background-color: white;
+  color: #e77241;
+  padding: 10px;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  position: absolute;
+  right: 32%;
+  top: 42%;
+  padding: 0 20px;
+  height: 18vh;
+}
+
+hr {
+  background-color: #e77241;
+  color: #e77241;
+  /* width: 0.1px; */
+  margin: 10px;
+}
+
+.digit {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 0.5rem;
+}
+
+.moreabout-cards {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 80vw;
+  max-height: 100%;
+  top: 65%;
+  left: 60%;
+  transform: translateX(-55%);
+  color: #e77241;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.moreabout-card {
+  width: 20vw;
+  height: 35vh;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 30px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #e77241;
+  transition: background-image 0.3s ease, color 0.3s ease;
+}
+
+.moreabout-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* Initially hide the background image */
+  transition: opacity 0.3s ease;
+}
+
+.moreabout-card:hover img {
+  opacity: 1; /* Show the image on hover */
+}
+
+.moreabout-icon {
+  width: 3vw;
+  height: 5vh;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.moreabout-carddetail {
+  position: relative;
+  text-align: center;
+  z-index: 2; /* Ensures text stays above the image */
+}
+
+.moreabout-card:hover {
+  background-color: transparent; /* Make the background color disappear on hover */
+}
+
+.moreabout-card:hover .moreabout-carddetail {
+  color: white;
+}
+@media (min-width: 1500px) and (max-width: 1699px) {
+  .moreabout-data h1 {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1499px) {
+  .moreabout-data h1 {
+    font-size: 2rem;
+    position: relative;
+    right: 20px;
+  }
+  .moreabout-data p {
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+    position: relative;
+    right: 20px;
+  }
+  .playernum-data {
+    height: 15vh;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1299px) {
+  .moreabout-data h1 {
+    font-size: 2rem;
+    position: relative;
+    right: 40px;
+  }
+  .moreabout-data p {
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+    position: relative;
+    right: 40px;
+  }
+  .playernum-data {
+    height: 15vh;
+  }
+  .joinUsImage {
+    height: 45vh;
+    width: 35vw;
+  }
+  .moreabout-question h4 {
+    left: 500px;
+  }
+
+  .basketball-iconmore {
+    left: 450px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1099px) {
+  .moreabout-data h1 {
+    font-size: 1.5rem;
+    position: relative;
+    right: 40px;
+  }
+  .moreabout-data p {
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+    position: relative;
+    right: 40px;
+  }
+  .playernum-data {
+    top: 39%;
+    height: 12vh;
+  }
+  .digit {
+    font-size: 24px;
+    line-height: 0.1rem;
+  }
+  .joinUsImage {
+    height: 40vh;
+    width: 30vw;
+  }
+  .moreabout-question h4 {
+    left: 500px;
+  }
+
+  .basketball-iconmore {
+    left: 450px;
+  }
+  .more-about {
+    height: 100vh;
+  }
+
+  .moreabout-card {
+    width: 20vw;
+    height: 30vh;
+  }
+  /* .moreabout-cards {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 80vw;
+  max-height: 100%;
+  top: 65%;
+  left: 60%;
+
+} */
+}
+@media (min-width: 700px) and (max-width: 899px) {
+  .more-about {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    padding-bottom: 50px;
+    position: relative; /* Maintain positioning context */
+  }
+
+  .backgroundImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .moreabout-imgtext {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .joinUsImage {
+    position: relative;
+    width: 80%;
+    height: 40vh;
+    margin: 20px auto;
+    left: 0;
+    z-index: 1;
+  }
+
+  .moreabout-question {
+    position: relative;
+    justify-content: center;
+    left: 0;
+    top: 20px;
+    z-index: 1;
+  }
+
+  .basketball-iconmore {
+    position: relative;
+    left: 0;
+    z-index: 1;
+  }
+
+  .moreabout-question h4 {
+    position: relative;
+    left: 0;
+    text-align: center;
+    width: auto;
+    z-index: 1;
+  }
+
+  .moreabout-data {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 0px;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Semi-transparent background for better readability */
+    margin: 0px;
+    border-radius: 10px;
+  }
+
+  .moreabout-data h1,
+  .moreabout-data p {
+    right: 0;
+  }
+
+  .playernum-data {
+    position: relative;
+    right: auto;
+    top: 0;
+    margin: 20px auto;
+    transform: none;
+    left: 0;
+    justify-content: center;
+    height: auto;
+    padding: 15px;
+    z-index: 1;
+  }
+
+  .moreabout-cards {
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    align-items: center;
+    margin-top: 0px;
+    z-index: 1;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .moreabout-card {
+    width: 80%;
+    height: 30vh;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 500px) and (max-width: 699px) {
+  .more-about {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    padding-bottom: 50px;
+    position: relative;
+    width: calc(100% - 50px);
+  }
+
+  .backgroundImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .moreabout-imgtext {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .joinUsImage {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    margin: 20px auto;
+    left: 0;
+    z-index: 1;
+  }
+
+  .moreabout-question {
+    position: relative;
+    justify-content: center;
+    left: 0;
+    top: 20px;
+    z-index: 1;
+  }
+
+  .basketball-iconmore {
+    position: relative;
+    left: 0;
+    z-index: 1;
+  }
+
+  .moreabout-question h4 {
+    position: relative;
+    left: 0;
+    text-align: center;
+    width: auto;
+    z-index: 1;
+  }
+
+  .moreabout-data {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 0px;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Semi-transparent background for better readability */
+    margin: 0px;
+    border-radius: 10px;
+  }
+
+  .moreabout-data h1,
+  .moreabout-data p {
+    right: 0;
+  }
+
+  .playernum-data {
+    position: relative;
+    right: auto;
+    top: 0;
+    margin: 20px auto;
+    transform: none;
+    left: 0;
+    justify-content: center;
+    height: auto;
+    padding: 15px;
+    z-index: 1;
+  }
+
+  .moreabout-cards {
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    align-items: center;
+    margin-top: 0px;
+    z-index: 1;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .moreabout-card {
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 300px) and (max-width: 499px) {
+  .more-about {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    padding-bottom: 50px;
+    position: relative;
+    width: calc(100% - 50px);
+  }
+
+  .backgroundImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .moreabout-imgtext {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .joinUsImage {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    margin: 20px auto;
+    left: 0;
+    z-index: 1;
+  }
+
+  .moreabout-question {
+    position: relative;
+    justify-content: center;
+    left: 0;
+    top: 20px;
+    z-index: 1;
+  }
+
+  .basketball-iconmore {
+    position: relative;
+    left: 0;
+    z-index: 1;
+  }
+
+  .moreabout-question h4 {
+    position: relative;
+    left: 0;
+    text-align: center;
+    width: auto;
+    z-index: 1;
+  }
+
+  .moreabout-data {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 0px;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Semi-transparent background for better readability */
+    margin: 0px;
+    border-radius: 10px;
+  }
+
+  .moreabout-data h1,
+  .moreabout-data p {
+    right: 0;
+  }
+
+  .playernum-data {
+    position: relative;
+    right:0px;
+    top: 0;
+    width: 50vw;
+    margin: 50px auto;
+    transform: none;
+    left: 0px;
+    gap: 5px;
+    justify-content: center;
+    height: auto;
+    padding: 0px 40px;
+    z-index: 1;
+  }
+  .digit {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 0rem;
+  }
+
+  .moreabout-cards {
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    align-items: center;
+    margin-top: 0px;
+    z-index: 1;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .moreabout-card {
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 0px;
+  }
+}

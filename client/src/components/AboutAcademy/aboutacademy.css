@@ -1,0 +1,513 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-flexdiv {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 140px);
+  height: 100vh;
+  margin: 30px auto;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin-bottom: 0;
+  position: relative;
+  top: 100px;
+}
+
+.about-question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-text {
+  color: #e77241;
+  width: 50%;
+}
+
+.about-text p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.about-text h1 {
+  color: #e77241;
+  font-size: 2rem;
+}
+
+.coach-text {
+  border: 3px solid #e77241;
+  border-radius: 5px;
+  padding: 20px;
+  height: 15vw;
+  /* margin-top: 10%; */
+}
+.coach-info h3{
+  font-size: 1.2rem;
+}
+.coach-text p {
+  color: white;
+}
+
+.coach-text img {
+  width: 5vw;
+  height: 10.4vh;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-question h3 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #333333;
+}
+
+.quotes-icon {
+  position: relative;
+  top: -35px;
+  left: 65%;
+  font-size: 5.5rem;
+  background-color: black;
+  padding: 10px;
+  color: #e77241;
+}
+
+.basketball-icon {
+  color: #e77241;
+}
+
+.about-sectionTwo {
+  position: relative;
+  left: 15%;
+  margin-bottom: 0;
+}
+
+.about-imageone {
+  width: 35vw;
+  height: 55vh;
+  object-fit: cover;
+}
+
+.about-imagetwo {
+  position: relative;
+  top: -70px;
+  left: -150px;
+  width: 25vw;
+  height: 35vh;
+  background-color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 0;
+  object-fit: cover;
+}
+
+.about-imageone,
+.about-imagetwo {
+  transition: all 0.3s ease-in-out; /* Adds smooth transition */
+}
+
+.about-imageone:hover,
+.about-imageone:focus {
+  transform: scale(1.1); /* Slightly enlarges the image */
+  filter: brightness(1.2); /* Brightens the image */
+}
+
+.about-imagetwo:hover,
+.about-imagetwo:focus {
+  transform: scale(1.1); /* Enlarges and rotates slightly */
+  background-color: #333; /* Changes background color */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
+}
+.coach-info {
+  display: flex;
+  line-height: 0.5rem;
+  gap: 20px;
+}
+
+.marquee-container {
+  width: 100%;
+  position: relative;
+  top: 25px;
+  overflow: hidden; /* Hides the content that moves out of the container */
+}
+
+.marquee-content {
+  display: flex;
+  gap: 100px;
+}
+
+.marquee-text {
+  margin-right: 150px;
+  color: #333333;
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.basketicon {
+  width: 9vw;
+  height: 18vh;
+  border-radius: 50%;
+  position: relative;
+  top: 80px;
+  left: 70px;
+  color: #333333;
+  animation: rotate 20s linear infinite;
+}
+
+/* Keyframes for rotation */
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1499px) {
+  .about-question h3 {
+    font-size: 4rem;
+  }
+  .quotes-icon {
+    top: -45px;
+    left: 70%;
+    font-size: 4.5rem;
+    padding: 8px;
+  }
+  .coach-text img {
+    width: 4.5vw;
+    height: 8vh;
+  }
+  .coach-text {
+    border: 3px solid #e77241;
+    border-radius: 5px;
+    padding: 15px;
+    height: 15vw;
+  }
+  .about-text h1 {
+    color: #e77241;
+    font-size: 1.5rem;
+  }
+  .marquee-container {
+    top: 0px;
+  }
+  .coach-text img {
+    width: 5vw;
+    height: 8vh;
+  }
+  .coach-text {
+    border: 3px solid #e77241;
+    border-radius: 5px;
+    padding: 10px;
+    height: 18vw;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1299px) {
+  .about-flexdiv {
+    width: calc(100% - 100px);
+    height: 80vh;
+    margin: 30px auto;
+    padding: 0px 0px;
+    top: 80px;
+  }
+  .about-text p {
+    color: white;
+    font-size: 1rem;
+  }
+  .about-question h3 {
+    font-size: 3.2rem;
+  }
+  .quotes-icon {
+    top: -45px;
+    left: 70%;
+    font-size: 4.5rem;
+    padding: 8px;
+  }
+  .coach-text img {
+    width: 4.5vw;
+    height: 7vh;
+  }
+  .coach-text {
+    border: 3px solid #e77241;
+    border-radius: 5px;
+    padding: 10px;
+    height: 18vw;
+  }
+  .about-text h1 {
+    color: #e77241;
+    font-size: 1.5rem;
+  }
+  .about-imageone {
+    width: 35vw;
+    height: 45vh;
+  }
+
+  .about-imagetwo {
+    left: -100px;
+    width: 25vw;
+    height: 30vh;
+  }
+  .marquee-container {
+    top: 0px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1099px) {
+  .about-flexdiv {
+    width: calc(100% - 50px);
+    height: 80vh;
+    margin: 10px auto;
+    padding: 0px 0px;
+    top: 60px;
+  }
+  .about-text p {
+    font-size: 0.9rem;
+  }
+  .about-question h3 {
+    font-size: 3rem;
+  }
+  .quotes-icon {
+    top: -45px;
+    left: 70%;
+    font-size: 4.5rem;
+    padding: 8px;
+  }
+  .coach-text img {
+    width: 4.5vw;
+    height: 6vh;
+  }
+  .coach-text {
+    border: 3px solid #e77241;
+    border-radius: 5px;
+    padding: 10px;
+    height: 20vw;
+  }
+  .about-text h1 {
+    color: #e77241;
+    font-size: 1.5rem;
+  }
+  .about-imageone {
+    width: 35vw;
+    height: 40vh;
+  }
+
+  .about-imagetwo {
+    left: -100px;
+    width: 25vw;
+    height: 30vh;
+  }
+  .marquee-text {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 700px) and (max-width: 899px) {
+  .about-flexdiv {
+    width: calc(100% - 50px);
+    height: 68vh;
+    margin: 0px auto;
+    padding: 0px 0px;
+    top: -130px;
+  }
+  .about-text p {
+    font-size: 0.8rem;
+  }
+  .about-question h3 {
+    font-size: 2.5rem;
+  }
+  .quotes-icon {
+    top: -25px;
+    left: 70%;
+    font-size: 3rem;
+    padding: 4px;
+  }
+  .coach-text img {
+    width: 4.5vw;
+    height: 5vh;
+  }
+  .coach-text {
+    border: 3px solid #e77241;
+    border-radius: 5px;
+    padding: 10px;
+    height: 25vw;
+  }
+  .about-text h1 {
+    color: #e77241;
+    font-size: 1.2rem;
+  }
+  .about-imageone {
+    width: 35vw;
+    height: 35vh;
+  }
+
+  .about-imagetwo {
+    left: -80px;
+    top: -30px;
+    width: 25vw;
+    height: 30vh;
+  }
+  .marquee-text {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 500px) and (max-width: 699px) {
+  .about-flexdiv {
+    width: calc(100% - 40px); /* Reduced padding for mobile */
+    height: auto; /* Changed from 100vh to auto for better content flow */
+    margin: 0px auto;
+    padding: 0px 20px; /* Added some padding */
+    top: -100px; /* Adjusted this value */
+    left: 0; /* Changed from 70px to 0 */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Added gap between flex items */
+  }
+  
+  .about-text {
+    width: 100%; /* Full width in column layout */
+    order: 2; /* Change order if needed */
+  }
+  
+  .about-sectionTwo {
+    width: 100%;
+    left: 0;
+    order: 1; /* Change order if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .about-text p {
+    font-size: 0.9rem; /* Slightly larger font */
+  }
+  
+  .about-question h3 {
+    font-size: 2.2rem; /* Adjusted size */
+    width: 100%;
+  }
+  
+  .quotes-icon {
+    top: 5px;
+    left: 80%; /* Adjusted position */
+    font-size: 2.5rem; /* Smaller icon */
+    padding: 4px;
+  }
+  
+  .coach-text {
+    height: 26vh; /* Auto height for content */
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .coach-text img {
+    width: 50px; /* Fixed size in px */
+    height: 50px;
+  }
+  
+  .about-imageone {
+    width: 100%; /* Full width */
+    height: 300px; /* Fixed height */
+  }
+  
+  .about-imagetwo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%; /* Relative width */
+    height: 200px; /* Fixed height */
+    margin: 0 auto; /* Center the image */
+  }
+  
+  .marquee-text {
+    font-size: 4rem; /* Smaller text for mobile */
+  }
+   .marquee-container {
+    top: -100px;
+  }
+}
+@media (min-width: 300px) and (max-width: 499px) {
+  .about-flexdiv {
+    width: calc(100% - 40px); /* Reduced padding for mobile */
+    height: auto; /* Changed from 100vh to auto for better content flow */
+    margin: 0px auto;
+    padding: 0px 20px; /* Added some padding */
+    top: -100px; /* Adjusted this value */
+    left: 0; /* Changed from 70px to 0 */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Added gap between flex items */
+  }
+  
+  .about-text {
+    width: 100%; /* Full width in column layout */
+    order: 2; /* Change order if needed */
+  }
+  
+  .about-sectionTwo {
+    width: 100%;
+    left: 0;
+    order: 1; /* Change order if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .about-text p {
+    font-size: 0.8rem; /* Slightly larger font */
+  }
+  
+  .about-question h3 {
+    font-size: 2.2rem; /* Adjusted size */
+    width: 100%;
+  }
+  
+  .quotes-icon {
+    top: 27px;
+    left: 80%; /* Adjusted position */
+    font-size: 2.5rem; /* Smaller icon */
+    padding: 0px;
+  }
+  .about-text h1 {
+    color: #e77241;
+    font-size: 1rem;
+  }
+  .coach-text {
+    height: 30vh; /* Auto height for content */
+    padding: 15px;
+    margin-top: 20px;
+  }
+  .coach-info h3{
+  font-size: 1rem;
+}
+  .coach-text img {
+    width: 50px; /* Fixed size in px */
+    height: 50px;
+  }
+  
+  .about-imageone {
+    width: 100%; /* Full width */
+    height: 300px; /* Fixed height */
+  }
+  
+  .about-imagetwo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%; /* Relative width */
+    height: 200px; /* Fixed height */
+    margin: 0 auto; /* Center the image */
+  }
+  
+  .marquee-text {
+    font-size: 4rem; /* Smaller text for mobile */
+  }
+   .marquee-container {
+    top: -100px;
+  }
+}

@@ -1,0 +1,401 @@
+.testimonial-container {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 140px);
+  margin: 0px auto;
+  padding: 0px 30px;
+}
+
+.test-head {
+  color: #333333;
+  text-align: start;
+  font-size: 8rem;
+  margin-top: 40px;
+  font-weight: 700;
+  -webkit-text-stroke: 3px #666666;
+}
+
+.head-anime {
+  display: flex;
+}
+
+/* Scrollable area */
+.testimony-div {
+  display: flex;
+  gap: 20px; /* Spacing between testimonials */
+  height: 40vh;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.testimony-div::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari */
+}
+
+/* Individual testimonial */
+.test-in {
+  flex: 0 0 calc(33.33% - 20px); /* 3 sections in one slide, accounting for the gap */
+  background: black;
+  color: white;
+  border: 3px solid #e77241;
+  height: 20vh;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for individual testimonials */
+.test-in:hover {
+  transform: translateY(-10px);
+}
+
+/* Quote icons */
+.test-icon {
+  font-size: 40px;
+  position: absolute;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.test-icon:nth-child(1) {
+  left: 20px;
+  top: -20px;
+}
+
+.test-icon:nth-child(2) {
+  right: 20px;
+  bottom: -20px;
+}
+
+/* Hover effects for icons */
+.test-in:hover .test-icon {
+  transform: rotateY(360deg);
+  color: #333333;
+}
+
+/* Testimonial content */
+.test-in p {
+  font-size: 15px;
+  line-height: normal;
+}
+
+.test-image {
+  width: 120px;
+  height: 120px;
+  background: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  transform: translateY(-50%) translateX(-50%);
+  border-radius: 100px;
+  border: 3px solid #e77241;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.test-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px;
+  transition: opacity 0.3s ease;
+}
+
+/* Text overlay on hover */
+.test-image:hover img {
+  opacity: 0; /* Hide the image on hover */
+  transition: opacity 0.3s ease;
+}
+
+.test-image:hover .test-btn {
+  opacity: 1;
+  visibility: visible;
+  background: rgba(0, 0, 0, alpha); /* Black background with transparency */
+}
+
+.test-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  background: none;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.test-btn h1 {
+  font-size: 15px;
+  color: white;
+  font-weight: 600;
+  line-height: 20px;
+}
+.test-btn h1 span {
+  font-size: 8px;
+  color: white;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 94%;
+  transform: translateY(-50%);
+  background-color: #666666;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.scroll-btn:hover {
+  background-color: #333333;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.arrow-icon-left {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon-left:hover {
+  transform: translatex(-5px);
+}
+.arrow-icon-right {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon-right:hover {
+  transform: translatex(5px);
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.circle-anime {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: black;
+}
+
+.circular-text-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+#circle-path {
+  fill: transparent;
+}
+
+.circular-text {
+  font-size: 22px;
+  fill: white;
+  animation: spin-text 25s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin-text {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 1300px) and (max-width: 1499px) {
+  .test-head {
+    font-size: 6.5rem;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1299px) {
+  .test-head {
+    font-size: 4.9rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1099px) {
+  .test-head {
+    font-size: 4.1rem;
+  }
+
+  .circular-text-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circular-text {
+    font-size: 18px;
+  }
+
+  /* Adjust the SVG dimensions to match */
+  .circular-text-wrapper svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Adjust testimonial card sizing */
+  .test-in {
+    flex: 0 0 calc(50% - 20px); /* Show 2 testimonials at a time instead of 3 */
+    height: 25vh; /* Slightly taller cards */
+  }
+
+  .scroll-btn {
+    top: 95%;
+  }
+}
+@media (min-width: 700px) and (max-width: 899px) {
+  .test-head {
+    font-size: 3.4rem;
+  }
+
+  .circular-text-wrapper {
+    width: 200px;
+    height: 150px;
+  }
+
+  .circular-text {
+    font-size: 18px;
+  }
+
+  /* Adjust the SVG dimensions to match */
+  .circular-text-wrapper svg {
+    width: 200px;
+    height: 150px;
+  }
+
+  .test-in {
+    padding: 20px 10px;
+    font-size: 30px;
+    flex: 0 0 calc(50% - 0px); /* Show 2 testimonials at a time instead of 3 */
+    height: 25vh; /* Slightly taller cards */
+  }
+  .scroll-btn {
+    top: 95%;
+  }
+  .testimonial-container {
+    width: calc(100% - 50px);
+    padding: 0px 00px;
+  }
+  .testimony-div {
+    display: flex;
+    gap: 20px; /* Spacing between testimonials */
+    height: 40vh;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+}
+@media (min-width: 500px) and (max-width: 699px) {
+  .test-head {
+    font-size: 2.2rem;
+  }
+
+  .circular-text-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circular-text {
+    font-size: 18px;
+  }
+
+  /* Adjust the SVG dimensions to match */
+  .circular-text-wrapper svg {
+    width: 150px;
+    height: 150px;
+  }
+  .test-in p {
+    font-size: 13px;
+    line-height: normal;
+  }
+  .test-in {
+    padding: 20px 10px;
+
+    flex: 0 0 calc(50% - 0px); /* Show 2 testimonials at a time instead of 3 */
+    height: 25vh; /* Slightly taller cards */
+  }
+  .scroll-btn {
+    top: 95%;
+  }
+  .testimonial-container {
+    width: calc(100% - 50px);
+    padding: 0px 00px;
+  }
+  .testimony-div {
+    gap: 20px; /* Spacing between testimonials */
+    height: 40vh;
+    padding: 20px;
+  }
+  .test-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (min-width: 300px) and (max-width: 499px) {
+  .test-head {
+    font-size: 1.4rem;
+  }
+
+  .circular-text-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circular-text {
+    font-size: 18px;
+  }
+
+  /* Adjust the SVG dimensions to match */
+  .circular-text-wrapper svg {
+    width: 100px;
+    height: 100px;
+  }
+  .test-in p {
+    font-size: 11px;
+    line-height: normal;
+  }
+  .test-in {
+    padding: 10px 10px;
+    flex: 0 0 calc(50% - 0px); /* Show 2 testimonials at a time instead of 3 */
+    height: 25vh; /* Slightly taller cards */
+  }
+  .scroll-btn {
+    top: 95%;
+  }
+  .testimonial-container {
+    width: calc(100% - 50px);
+    padding: 0px 00px;
+  }
+  .testimony-div {
+    gap: 20px; /* Spacing between testimonials */
+    height: 40vh;
+    padding: 20px;
+  }
+  .test-image {
+    width: 60px;
+    height: 60px;
+  }
+  .test-icon {
+    font-size: 30px;
+  }
+
+.test-icon:nth-child(2) {
+  right: 10px;
+  bottom: -20px;
+}
+}

@@ -1,0 +1,242 @@
+.img-container {
+    position: relative;
+  }
+  .img-container img {
+    width: 100%;
+    height: 80vh;
+    opacity: 0.7;
+  }
+
+  
+  .img-abttext {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+     }
+  
+  .gradient-text {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #e77241, #f8a477);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+  }
+  
+  .navigation-container {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 205px rgba(231, 114, 65, 0.3);
+  }
+  
+  .navigation-container h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #e77241;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  .location-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    gap: 20px;
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+  }
+  
+  .map-container {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .map-container:hover {
+    opacity: 0.9;
+  }
+  
+  .map-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 1000;
+    transition: all 0.3s;
+  }
+  
+  .map-container:hover .map-overlay {
+    background: rgba(231, 114, 65, 0.9);
+    color: #000;
+  }
+  
+  .location-info {
+    flex: 1;
+    padding: 25px;
+  }
+  
+  .location-info h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #e77241;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .section {
+    margin-bottom: 18px;
+  }
+  
+  .section h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #e77241;
+    font-weight: 500;
+  }
+  
+  .section p {
+    font-size: 16px;
+    margin: 0;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #333333;
+    margin: 40px 0;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  
+  .contact-form h3 {
+    font-size: 18px;
+    margin: 15px 0 8px 0;
+    color: #e77241;
+    font-weight: 500;
+  }
+  
+  .input-field {
+    margin-bottom: 20px;
+  }
+  
+  .input-field input,
+  .input-field textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #111;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  
+  .input-field input:focus,
+  .input-field textarea:focus {
+    outline: none;
+    border-color: #e77241;
+    box-shadow: 0 0 0 2px rgba(231, 114, 65, 0.3);
+  }
+  
+  .input-field textarea {
+    height: 140px;
+    resize: vertical;
+  }
+  
+  .contact-form p {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #ccc;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  
+  .submit-button {
+    background-color: #e77241;
+    color: #000;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    align-self: center;
+    width: 200px;
+  }
+  
+  .submit-button:hover {
+    background-color: #d1663a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 114, 65, 0.4);
+  }
+  
+  ::placeholder {
+    color: #666;
+    opacity: 1;
+  }
+  
+  /* Leaflet Map Styling */
+  .leaflet-container {
+    background-color: #111 !important;
+    height: 350px !important;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    background-color: #333333;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .leaflet-popup-content {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .leaflet-popup-tip {
+    background-color: #333333;
+  }
+  
+  .leaflet-control-attribution {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: #ccc;
+    font-size: 11px;
+  }
+  
+  .leaflet-control-attribution a {
+    color: #e77241;
+  }
+  

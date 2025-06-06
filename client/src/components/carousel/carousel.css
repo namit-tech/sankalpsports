@@ -1,0 +1,199 @@
+.container {
+  width: 100%;
+  height: 95vh;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  top: 100px;
+}
+
+.swiper_container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.main-slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* #F4A35D */
+/* #E77241 */
+/* #E88606 */
+/* #D75F02 */
+/* #BB4802 */
+/* #F8CC6C */
+/* #cc5402 */
+
+.main-slogan h5 {
+  width: 100%;
+  font-size: 1.5rem;
+  position: relative;
+  top: 300px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.582);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  aspect-ratio: 16/9;
+}
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes backwardForward {
+  0% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+  }
+  30% {
+    transform: scale(0.9) translateZ(-100px);
+    opacity: 0.8;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+  }
+  60% {
+    transform: scale(1.1) translateZ(50px);
+    opacity: 1;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+  }
+  100% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+  }
+}
+
+.fade-in {
+  animation: backwardForward 2s ease-in-out forwards;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+}
+
+.fade-out {
+  animation: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  z-index: 3;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #894526;
+}
+
+.swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 1;
+  pointer-events: none;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+@media (min-width: 1100px) and (max-width: 1299px) {
+  .container {
+    position: relative;
+    top: 50px;
+  }
+  .main-slogan {
+    top: 45%;
+  }
+}
+@media (min-width: 900px) and (max-width: 1099px) {
+  .container {
+    position: relative;
+    top: 0px;
+    height: 65vh;
+  }
+
+  .main-slogan {
+    top: 35%;
+  }
+}
+@media (min-width: 700px) and (max-width: 899px) {
+  .container {
+    position: relative;
+    top: -80px;
+  }
+  .main-slogan {
+    top: 34%;
+  }
+  .main-slogan h5 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 500px) and (max-width: 699px) {
+  .container {
+    position: relative;
+    top: -20px;
+    height: 65vh;
+  }
+  .main-slogan {
+    top: 15%;
+  }
+  .main-slogan h5 {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 300px) and (max-width: 499px) {
+  .container {
+    position: relative;
+    top: -20px;
+    height: 65vh;
+  }
+  .main-slogan {
+    top: 7%;
+  }
+  .main-slogan h5 {
+    font-size: 0.6rem;
+  }
+}
